@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #030328;
+  color: white;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+header {
+  background-color: #75759e;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 1.2rem;
+}
+header #search {
+  background-color: transparent;
+  padding: 0.7rem;
+  border-radius: 20px;
+  border: 0.14rem solid #030328;
+  font-family: inherit;
+  color: #ffffffec;
+  font-size: 1rem;
+}
+#search::placeholder {
+  color: #ffffffec;
+}
+#search:focus {
+  background-color: #474797;
+  outline: none;
+}
+
+.movie {
+  background-color: #75759e;
+  border-radius: 4px;
+  box-shadow: 0px 0px 14px -3px rgba(255, 255, 255, 0.4);
+  -webkit-box-shadow: 0px 0px 14px -3px rgba(255, 255, 255, 0.4);
+  -moz-box-shadow: 0px 0px 14px -3px rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
+  width: 298px;
+  margin: 1.2rem;
+  overflow: hidden;
+}
+.movie img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+.movie-info {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 1.2px;
+}
+.movie-info h3 {
+  margin: 0;
+}
+.movie-info span {
+  background-color: #030328;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.bi-star-fill {
+  width: 18px;
+  height: 18px;
+  color: rgb(230, 230, 14);
+}
+
+.movie-info span.green {
+  color: rgb(12, 243, 16);
+}
+.movie-info span.orange {
+  color: rgb(255, 174, 0);
+}
+.movie-info span.red {
+  color: rgb(255, 0, 0);
+}
+.movie-card {
+  position: relative;
+  overflow: hidden;
+}
+.overview {
+  position: absolute;
+  max-height: 100%;
+  overflow: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: black;
+  padding: 1.2rem;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+.movie:hover .overview {
+  transform: translate(0);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.movie h4{
+    margin-top: 0;
+}
